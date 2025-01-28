@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .blink-overlay {
+            transform-origin: top;
+            transform: scaleY(0);
+            animation: blink 4s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 92% {
+                transform: scaleY(0);
+            }
+            95% {
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 px-60">
+        <div class="navbar-start">
+            <div class="text-4xl font-bold">LLeMental</div>
+        </div>
+        <div class="navbar-end">
+            <ul class="menu menu-horizontal px-1 text-xl">
+                <li><a>Solutions</a></li>
+                <li><a>About</a></li>
+                <li><a>Pricing</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="px-44 py-40 bg-gradient-to-b from-white to-[#f0f7ff] border-y border-black">
+        <div class="flex items-center justify-around gap-20">
+            <div class="flex flex-col gap-6">
+                <div class="text-5xl font-bold max-w-xl leading-tight">
+                    Simple, Productive AI Tools for Business
+                </div>
+                <div class="text-2xl max-w-lg">Automate PowerPoint, process documents and more.</div>
+                <div class="flex gap-6 mt-4">
+                    <button class="btn btn-lg btn-outline border-4 bg-[#2ce69b] text-black border-none hover:bg-[#25cc88]">View Products</button>
+                    <button class="btn btn-lg bg-black text-white hover:bg-gray-800 border-none">Contact Us</button>
+                </div>
+            </div>
+            <div class="flex-shrink-0">
+                <!-- Light mode SVG -->
+                <svg width="440" height="293" viewBox="0 0 288 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Add clipPath definitions -->
+                    <defs>
+                        <clipPath id="leftEyeClip">
+                            <circle cx="170" cy="48" r="20" />
+                        </clipPath>
+                        <clipPath id="rightEyeClip">
+                            <circle cx="214" cy="48" r="20" />
+                        </clipPath>
+                    </defs>
+                    
+                    <!-- First row -->
+                    <rect x="4" y="4" width="88" height="88" rx="8" fill="white"/>
+                    <text x="48" y="64" text-anchor="middle" fill="black" font-size="40" font-weight="bold">L</text>
+                    <text x="16" y="22" fill="black" font-size="14" font-weight="bold">1</text>
+                    
+                    <rect x="100" y="4" width="176" height="88" rx="8" fill="white"/>
+                    <!-- Modified eye groups -->
+                    <g class="eye-group" clip-path="url(#leftEyeClip)">
+                        <circle cx="170" cy="48" r="20" class="eye-outer" fill="black"/>
+                        <circle cx="170" cy="48" r="16" class="eye-white" fill="#2ce69b"/>
+                        <circle cx="170" cy="48" r="12" class="eye-inner" fill="black"/>
+                        <circle cx="173" cy="45" r="3" class="eye-highlight" fill="white"/>
+                        <rect class="blink-overlay" x="150" y="28" width="40" height="40" fill="black"/>
+                    </g>
+                    <g class="eye-group" clip-path="url(#rightEyeClip)">
+                        <circle cx="214" cy="48" r="20" class="eye-outer" fill="black"/>
+                        <circle cx="214" cy="48" r="16" class="eye-white" fill="#2ce69b"/>
+                        <circle cx="214" cy="48" r="12" class="eye-inner" fill="black"/>
+                        <circle cx="217" cy="45" r="3" class="eye-highlight" fill="white"/>
+                        <rect class="blink-overlay" x="194" y="28" width="40" height="40" fill="black"/>
+                    </g>
+                    
+                    <!-- Second row -->
+                    <rect x="4" y="100" width="88" height="88" rx="8" fill="white"/>
+                    <text x="48" y="156" text-anchor="middle" fill="black" font-size="40" font-weight="bold">L</text>
+                    <text x="16" y="116" fill="black" font-size="14" font-weight="bold">2</text>
+                    
+                    <rect x="100" y="100" width="88" height="88" rx="8" fill="white"/>
+                    <text x="144" y="156" text-anchor="middle" fill="black" font-size="40" font-weight="bold">e</text>
+                    <text x="108" y="116" fill="black" font-size="14" font-weight="bold">3</text>
+                    
+                    <rect x="196" y="100" width="88" height="88" rx="8" fill="white"/>
+                    <text x="240" y="156" text-anchor="middle" fill="black" font-size="40" font-weight="bold">M</text>
+                    <text x="204" y="116" fill="black" font-size="14" font-weight="bold">4</text>
+
+                    <!-- Individual borders for each element -->
+                    <rect x="8" y="4" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="100" y="4" width="180" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="8" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="100" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="192" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="px-44 py-20 bg-base-200">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+                <div class="card-body">
+                    <div class="text-5xl text-[#2ce69b] mb-4">📊</div>
+                    <h3 class="card-title text-2xl">Data Extraction</h3>
+                    <p>Transform unstructured data into actionable insights with our advanced AI algorithms.</p>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+                <div class="card-body">
+                    <div class="text-5xl text-[#2ce69b] mb-4">🎯</div>
+                    <h3 class="card-title text-2xl">PowerPoint Generation</h3>
+                    <p>Create professional presentations in minutes with AI-powered content generation.</p>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+                <div class="card-body">
+                    <div class="text-5xl text-[#2ce69b] mb-4">🤖</div>
+                    <h3 class="card-title text-2xl">Custom AI Solutions</h3>
+                    <p>Tailored AI solutions designed to meet your specific business needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="px-44 py-20">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8">Join hundreds of businesses already leveraging our AI solutions.</p>
+            <div class="flex gap-4 justify-center">
+                <button class="btn btn-outline border-4 bg-[#2ce69b] text-black border-none hover:bg-[#25cc88]">Start Free Trial</button>
+                <button class="btn btn-outline border-[#2ce69b] border-4 text-[#2ce69b] hover:bg-[#2ce69b] hover:border-[#2ce69b] hover:text-black">Schedule Demo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-base-200 text-base-content">
+        <div>
+            <div class="text-2xl font-bold text-[#2ce69b]">LLeMental</div>
+            <p>Making AI accessible since 2024</p>
+        </div> 
+        <div>
+            <span class="footer-title">Solutions</span> 
+            <a class="link link-hover">Data Extraction</a> 
+            <a class="link link-hover">PowerPoint Generation</a> 
+            <a class="link link-hover">Custom Solutions</a>
+        </div> 
+        <div>
+            <span class="footer-title">Company</span> 
+            <a class="link link-hover">About us</a> 
+            <a class="link link-hover">Contact</a> 
+            <a class="link link-hover">Careers</a>
+        </div> 
+        <div>
+            <span class="footer-title">Legal</span> 
+            <a class="link link-hover">Terms of use</a> 
+            <a class="link link-hover">Privacy policy</a>
+        </div>
+    </footer>
+</body>
+
+</html>
