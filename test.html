@@ -22,12 +22,32 @@
                 transform: scaleY(1);
             }
         }
+
+        /* Add these new styles */
+        .logo-container {
+            position: relative;
+        }
+
+        .thought-bubble-svg {
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            pointer-events: none;
+        }
+
+        .logo-container:hover .thought-bubble-svg {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     </style>
 </head>
 
 <body class="min-h-screen">
     <!-- Navbar -->
-    <div class="navbar bg-[#00C897] px-40 2xl:px-80">
+    <div class="navbar bg-[#00C897] px-80">
         <div class="navbar-start">
             <div class="text-4xl font-bold text-black">LLeMental</div>
         </div>
@@ -42,20 +62,22 @@
     </div>
 
     <!-- Main content -->
-    <div class="px-40 2xl:px-80 py-40 bg-gradient-to-b from-white to-[#f0f7ff] border-y border-black">
-        <div class="flex justify-between items-center gap-20">
+    <div class="px-80 pb-40 pt-60 bg-gradient-to-b from-white to-white border-y border-black">
+        <div class="flex items-center justify-between gap-20">
             <div class="flex flex-col gap-6">
-                <div class="text-5xl font-bold text-black max-w-xl leading-tight">
+                <div class="text-6xl font-bold text-black max-w-xl leading-tight">
                     Simple, Productive AI Tools for Business
                 </div>
-                <div class="text-black text-2xl max-w-lg">Automate PowerPoint, process documents and more.</div>
+                <div class="text-black text-2xl max-w-lg font-thin">Automate PowerPoint, process documents and more.</div>
                 <div class="flex gap-6 mt-4">
-                    <button class="btn btn-lg btn-outline border-4 bg-[#FFD365] text-black border-none hover:bg-[#FFD365]">View Products</button>
+                    <button class="btn btn-lg btn-outline border-4 bg-[#00C897] text-black border-none hover:bg-[#FFD365]">View Products</button>
                     <button class="btn btn-lg bg-black text-white hover:bg-gray-800 border-none">Contact Us</button>
                 </div>
             </div>
-            <div class="flex-shrink-0">
-                <!-- Light mode SVG -->
+            <div class="flex-shrink-0 logo-container">
+                <!-- Thought bubble SVG -->
+
+                <!-- Original logo SVG -->
                 <svg width="440" height="293" viewBox="0 0 288 192" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Add clipPath definitions -->
                     <defs>
@@ -69,8 +91,8 @@
                     
                     <!-- First row -->
                     <rect x="4" y="4" width="88" height="88" rx="8" fill="white"/>
-                    <text x="48" y="64" text-anchor="middle" fill="black" font-size="40" font-weight="bold">L</text>
-                    <text x="16" y="22" fill="black" font-size="14" font-weight="bold">1</text>
+                    <text x="78" y="64" text-anchor="middle" fill="black" font-size="40" font-weight="bold">L</text>
+                    <text x="42" y="24" fill="black" font-size="14" font-weight="bold">1</text>
                     
                     <rect x="100" y="4" width="176" height="88" rx="8" fill="white"/>
                     <!-- Modified eye groups -->
@@ -92,21 +114,21 @@
                     <!-- Second row -->
                     <rect x="4" y="100" width="88" height="88" rx="8" fill="white"/>
                     <text x="48" y="156" text-anchor="middle" fill="black" font-size="40" font-weight="bold">L</text>
-                    <text x="16" y="116" fill="black" font-size="14" font-weight="bold">1</text>
+                    <text x="20" y="116" fill="black" font-size="14" font-weight="bold">2</text>
                     
                     <rect x="100" y="100" width="88" height="88" rx="8" fill="white"/>
                     <text x="144" y="156" text-anchor="middle" fill="black" font-size="40" font-weight="bold">e</text>
-                    <text x="108" y="116" fill="black" font-size="14" font-weight="bold">2</text>
+                    <text x="112" y="116" fill="black" font-size="14" font-weight="bold">3</text>
                     
                     <rect x="196" y="100" width="88" height="88" rx="8" fill="white"/>
                     <text x="240" y="156" text-anchor="middle" fill="black" font-size="40" font-weight="bold">M</text>
-                    <text x="204" y="116" fill="black" font-size="14" font-weight="bold">3</text>
+                    <text x="204" y="116" fill="black" font-size="14" font-weight="bold">4</text>
 
                     <!-- Individual borders for each element -->
-                    <rect x="10" y="4" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
-                    <rect x="100" y="4" width="180" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
-                    <rect x="10" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
-                    <rect x="100" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="32" y="4" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="122" y="4" width="140" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="12" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
+                    <rect x="102" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
                     <rect x="192" y="95" width="88" height="88" rx="8" stroke="black" stroke-width="4" fill="none"/>
                 </svg>
             </div>
@@ -114,7 +136,7 @@
     </div>
 
     <!-- Features Section -->
-    <div class="px-44 py-20 bg-base-200">
+    <div class="px-44 py-20 bg-[#FDFFA9]">
         <h2 class="text-4xl font-bold text-center mb-12">Our Solutions</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
@@ -156,7 +178,7 @@
     <!-- Footer -->
     <footer class="footer p-10 bg-base-200 text-base-content">
         <div>
-            <div class="text-2xl font-bold text-[#2ce69b] flex items-center gap-2">🧠 LLeMental</div>
+            <div class="text-2xl font-bold text-[#2ce69b] flex items-center gap-2">LLeMental 🧠</div>
             <p>Making AI accessible since 2024</p>
         </div> 
         <div>
